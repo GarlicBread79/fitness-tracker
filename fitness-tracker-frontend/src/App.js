@@ -10,30 +10,26 @@ import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  // 1) Store all profiles
+  // 1) This will store all profiles made
   const [profiles, setProfiles] = useState([]);
 
-  // 2) Track the currently active profile (null if none)
+  // 2) This will track the current active profile (null if none) that the user selects
   const [activeProfile, setActiveProfile] = useState(null);
 
-  // 3) Also store workouts
+  // 3) This will also store workouts
   const [workouts, setWorkouts] = useState([]);
 
-  // Fetch profiles on mount
+  // This will fetch profiles on mount
   useEffect(() => {
     fetch('http://localhost:5000/api/profiles')
       .then((res) => res.json())
       .then((data) => {
         setProfiles(data);
-        // If you want to auto-select the first profile ONLY if none is selected:
-        // if (!activeProfile && data.length > 0) {
-        //   setActiveProfile(data[0]);
-        // }
       })
       .catch((err) => console.error('Error fetching profiles:', err));
   }, []);
 
-  // Fetch workouts on mount
+  // This will fetch workouts on mount
   useEffect(() => {
     fetch('http://localhost:5000/api/workouts')
       .then((res) => res.json())
@@ -136,7 +132,7 @@ function App() {
             element={
               <Progress
                 activeProfile={activeProfile}
-                workouts={workouts}  // <-- ADDED
+                workouts={workouts}  
               />
             }
           />
