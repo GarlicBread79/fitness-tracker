@@ -32,7 +32,7 @@ main {
   padding: 1rem;
 }
 
-/* Removed ".progress" and replaced it with ".progress-page" here */
+
 .dashboard,
 .workout-log,
 .progress-page,
@@ -83,6 +83,6 @@ button:hover {
 }
 
 .button-spacing {
-  margin-right: 8px !important; /* ensures a gap before the next button */
+  margin-right: 8px !important; /* this will ensure a gap before the next button */
   display: inline-block !important;
 }
