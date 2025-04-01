@@ -1,9 +1,9 @@
 /* src/index.css */
 
-/* 1) Import the Roboto font from Google Fonts (weights 400,700) */
+/* 1) This will import the Roboto font from Google Fonts (weights 400,700) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* 2) Global reset + use Roboto for the entire site */
+/* 2) Use Roboto for the entire site */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Keep your 'code' font style if you want a monospace look for <code> elements */
+/* Keep code font style */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
