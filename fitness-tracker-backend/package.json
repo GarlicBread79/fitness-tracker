@@ -1,13 +1,12 @@
 {
   "name": "fitness-tracker-backend",
   "version": "1.0.0",
+  "description": "Backend for Fitness Tracker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.2",
@@ -20,5 +19,10 @@
     "mongoose": "^8.10.1",
     "morgan": "^1.10.0"
   },
-  "description": ""
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": "20.x"
+  }
 }
