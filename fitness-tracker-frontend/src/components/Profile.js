@@ -36,7 +36,7 @@ function Profile({ profiles, setProfiles, activeProfile, setActiveProfile }) {
 
     if (isNew) {
       // POST /api/profiles
-      const response = await fetch('http://localhost:5000/api/profiles', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/profiles`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -52,7 +52,7 @@ function Profile({ profiles, setProfiles, activeProfile, setActiveProfile }) {
       alert('Profile created!');
     } else {
       // PUT /api/profiles/:profileId
-      const response = await fetch(`http://localhost:5000/api/profiles/${profileId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/profiles/${profileId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
