@@ -60,7 +60,7 @@ function WorkoutLog({ workouts, setWorkouts, activeProfile }) {
       data.date = selectedDate.toISOString();
       data.profileId = activeProfile._id;
 
-      const response = await fetch('http://localhost:5000/api/workouts', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/workouts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -84,7 +84,7 @@ function WorkoutLog({ workouts, setWorkouts, activeProfile }) {
   // DELETE a workout
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/workouts/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/workouts/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
@@ -131,7 +131,7 @@ function WorkoutLog({ workouts, setWorkouts, activeProfile }) {
         date: isoDate,
       };
 
-      const response = await fetch(`http://localhost:5000/api/workouts/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/workouts/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedData),
