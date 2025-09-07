@@ -17,7 +17,7 @@ function ProfileList({
 
   const handleDeleteProfile = async (profileId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/profiles/${profileId}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/profiles/${profileId}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
