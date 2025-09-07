@@ -21,7 +21,7 @@ function App() {
 
   // This will fetch profiles on mount
   useEffect(() => {
-    fetch('http://localhost:5000/api/profiles')
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/profiles`)
       .then((res) => res.json())
       .then((data) => {
         setProfiles(data);
@@ -31,7 +31,7 @@ function App() {
 
   // This will fetch workouts on mount
   useEffect(() => {
-    fetch('http://localhost:5000/api/workouts')
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/api/profiles`)
       .then((res) => res.json())
       .then((data) => {
         setWorkouts(data);
